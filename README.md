@@ -21,6 +21,6 @@ author: JaQuan
 
 ## 扩展负责人
 
-[HanSon](https://github.com/springjk)
+[JaQuan](https://github.com/springjk)
 
 chinese.jk@gmail.com
