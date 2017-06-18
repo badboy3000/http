@@ -14,7 +14,7 @@ class Http extends AbstractMessageHandler
 
     public $name = 'http';
 
-    public $zhName = 'cURL 单例请求器';
+    public $zhName = 'guzzle 服务';
 
     public static $client = null;
 
