@@ -36,7 +36,7 @@ class Http extends AbstractMessageHandler
      * @param array $options
      * @param bool $origin
      *
-     * @return string || mixed
+     * @return string|\Psr\Http\Message\ResponseInterface;
      */
     public static function request($method, $uri = '', array $options = [], $origin = false)
     {
