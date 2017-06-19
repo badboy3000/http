@@ -3,8 +3,8 @@
 namespace Vbot\Http;
 
 use GuzzleHttp\Client;
-use Hanson\Vbot\Extension\AbstractMessageHandler;
 use Illuminate\Support\Collection;
+use Hanson\Vbot\Extension\AbstractMessageHandler;
 
 class Http extends AbstractMessageHandler
 {
@@ -31,18 +31,19 @@ class Http extends AbstractMessageHandler
     }
 
     /**
-     * @param string $method
+     * @param $method
      * @param string $uri
      * @param array $options
+     * @param bool $origin
      *
-     * @return  string
+     * @return string || mixed
      */
-    public static function request($method, $uri = '', array $options = [])
+    public static function request($method, $uri = '', array $options = [], $origin = false)
     {
         $options = array_merge(['timeout' => 10, 'verify' => false], $options);
 
         $response = static::$client->request($method, $uri, $options);
 
-        return $response->getBody()->getContents();
+        return $origin ? $response : $response->getBody()->getContents();
     }
 }
