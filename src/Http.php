@@ -16,6 +16,9 @@ class Http extends AbstractMessageHandler
 
     public $zhName = 'guzzle 服务';
 
+    /**
+     * @var null|\GuzzleHttp\Client
+     */
     public static $client = null;
 
     public function handler(Collection $message)
